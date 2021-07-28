@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font: size 13px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+.nav .logo {
+  height: 50px;
+  width: 50px;
+}
+.nav a {
+  text-decoration: none;
+  color: #3d3c3c;
+  padding-right: 10px;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  width: 100%;
+  padding-left: 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .ket {
+  position: relative;
+  max-width: 700px;
+}
+.content .ket .judul {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+}
+.content .ket .judul span {
+  color: #017143;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.content .ket .decs {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  text-indent: 50px;
+}
+.content .ket .button {
+  padding: 10px 20px;
+  background-color: #017143;
+  margin: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.content .ket .button:hover {
+  background-color: #ddb500;
+  color: #000;
+}
+.content .display {
+  display: flex;
+  justify-content: flex-end;
+  width: 600px;
+  padding-right: 200px;
+  margin-top: 50px;
+  transition: 0.5s;
+}
+.content .display img {
+  max-height: 500px;
+  -ms-transform: rotate(20deg);
+  /* IE 9 */
+  transform: rotate(-15deg);
+}
+.content .display img:hover {
+  transform: translateY(-15px);
+}
+.content .thumb {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  top: 580px;
+}
+.content .thumb li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.content .thumb li img {
+  max-height: 60px;
+}
+.content .thumb li:hover {
+  transform: translateY(-15px);
+}
+.content .medsos {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content .medsos img {
+  height: 30px;
+  display: inline-block;
+  margin: 5px 0;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
+}
+
+@media (max-width: 991px) {
+  body {
+    background-color: #e0d100;
+  }
+
+  .nav {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav .menu {
+    display: none;
+  }
+  .nav .menu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    background-color: #e6e9e8;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav .menu.active a {
+    margin: 10px 0;
+  }
+  .nav .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(/assets/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+  }
+  .nav .toggle.active {
+    position: fixed;
+    right: 30px;
+    background: url(/assets/close.png);
+    background-size: 25;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+  }
+
+  .content {
+    padding: 10px 30px;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .content .thumb {
+    top: 700;
+  }
+  .content .ket .judul {
+    font-size: 2em;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .content .display {
+    max-width: 100%;
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 0;
+    top: 300px;
+    transition: 0.5s;
+  }
+  .content .display img {
+    max-height: 300px;
+  }
+  .content .thumb {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    width: 100%;
+    transform: rotateX(-50%);
+    margin-top: 40px;
+  }
+  .content .thumb li img {
+    max-width: 40px;
+  }
+  .content .medsos {
+    right: 0;
+    background-color: #017143;
+    padding: 1px 4px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    top: 20px;
+  }
+
+  .circle {
+    clip-path: circle(400px at center bottom);
+    position: absolute;
+    top: 100px;
+  }
+}
+@media (max-width: 510px) {
+  .circle {
+    top: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="nav">
+        <img src="/assets/logo-01.svg" class="logo" alt="">
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <div class="menu">
+            <a href="">Home</a>
+            <a href="">Menu</a>
+            <a href="">What's New</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="ket">
+            <div class="judul">it's not just Coffe
+                <br>It's
+                <span>StarBucks</span>
+            </div>
+            <div class="decs">
+                Lorem ipsum dolor sit amet. Ab dolores ullam cum alias minima a fugit asperiores sed unde earum. Qui
+                sapiente ratione qui culpa galisum eos quisquam deleniti id ipsa asperiores est pariatur quidem est
+                corporis
+                necessitatibus qui numquam quis. Ut officia laboriosam qui similique beatae et excepturi ipsum quo
+                voluptas.
+            </div>
+            <button class="button">LEARN MORE</button>
+        </div>
+        <div class="display">
+            <img src="/assets/Asset 13.png" alt="" class="gambar">
+        </div>
+        <div class="thumb">
+            <li><img src="/assets/Asset 12.png" alt="" onclick="ubah('/assets/Asset 12.png');ubahWarna('#017143')"></li>
+            <li><img src="/assets/Asset 13.png" alt="" onclick="ubah('/assets/Asset 13.png');ubahWarna('#ddb500')"></li>
+            <li><img src="/assets/Asset 29.png" alt="" onclick="ubah('/assets/Asset 29.png');ubahWarna('#71014f')"></li>
+        </div>
+        <div class="medsos">
+            <img src="/assets/ig.svg" alt="" class="ig">
+            <img src="/assets/twitter-01.svg" alt="" class="twitter">
+            <img src="/assets/wa-01.svg" alt="" class="wa">
+        </div>
+    </div>
+<script type="text/javascript">
+    function ubah(gambar){
+        document.querySelector('.gambar').src=gambar;
+    }
+    function ubahWarna(warna){
+        const change=document.querySelector('.circle');
+        change.style.background=warna;
+    }
+    function toggleMenu(){
+        const menuToggle=document.querySelector('.toggle');
+        var menu =document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+</script>
+</body>
+
+</html>
